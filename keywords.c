@@ -29,7 +29,7 @@ struct keytab keywords[13] = {
 int count_word(char* word) {
 	int i;
 	for (i=0; i<13; i++){
-		if(strincmp(keywords[i].name, word, strlen(keywords[i].name) == 0)) {
+		if(strncmp(keywords[i].name, word, strlen(keywords[i].name)) == 0) {
 			keywords[i].nums++;
 			break;
 		}
